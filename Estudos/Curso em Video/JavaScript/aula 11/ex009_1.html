@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IF ex</title>
+</head>
+<body>
+    Digite seu País: <input type="text" name="pais" id="ptxt">
+    <input type="button" value="Verificar" onclick="verificar()">
+    <div id ='res'></div>
+    <script>
+        var ptxt1 = document.querySelector("input#ptxt");
+        var res = document.querySelector('div#res');
+       // var pais = ptxt1.value; nao funcionou
+        function verificar(){
+        if(ptxt1.value.toUpperCase() === 'BRASIL'){
+            res.innerHTML = `<p>Você é Brasileiro </p>`;
+        }
+        else{
+            res.innerHTML = '<p>Você é estrangeiro</p>';
+        }
+    }
+    </script>
+</body>
+</html>

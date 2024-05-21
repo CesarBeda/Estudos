@@ -1,0 +1,35 @@
+Como a internet funciona ?
+
+Representação dde Dados
+
+funciona a base de sinais 0 e 1 
+
+0 = sem sinal elétrico
+1 = com sinal elétrico
+
+Bytes = conjunto de bits
+ 
+1 Byte = 8 bits
+
+0100001 = a
+utf-8
+
+2^10 1024 bytes = 1 kB (KiloByte)
+     1024 kB = 1mb (MegaByte)
+     1024 mB = 1gb (gigaByte)
+     1024 gB = 1tB (TeraByte)
+     1024 tB = 1pB ()
+     1024 pB = 1eB ()
+     1024 eB = 1zB ()
+     1024 zB = 1yB (YottaByte)
+
+Como nos Conectamos?
+
+cliente - quando solicitamos serviços na internet
+
+Como acessamos servidores?
+
+servidor DNS Sistema de Nome de Domínio
+
+instagram.com - Domínio
+youtube.com - Domínio 
