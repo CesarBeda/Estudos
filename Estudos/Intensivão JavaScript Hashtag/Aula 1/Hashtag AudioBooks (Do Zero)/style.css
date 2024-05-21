@@ -1,0 +1,37 @@
+body {
+    background-image: linear-gradient(#51544b, #8897a7);
+    color: aliceblue;
+    height: 100dvh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#container-app {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#informacoes-faixa{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 2rem 0 1rem 0;
+    font-size: 1.5rem;
+}
+#container-botoes{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+button {
+    background-color: transparent;
+    color: inherit;
+    border: none;
+    cursor: pointer;
+}
+#btn-voltar, #btn-pular{
+    font-size: 2rem;
+}
+#play-pause{
+    font-size: 3rem;
+}
