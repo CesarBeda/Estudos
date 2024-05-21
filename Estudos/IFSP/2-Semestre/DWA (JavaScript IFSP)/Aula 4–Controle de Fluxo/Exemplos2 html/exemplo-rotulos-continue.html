@@ -1,0 +1,27 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Documento sem título</title>
+<script type="text/javascript">
+
+nextrow:
+	for (var row = 1;row <= 5;++row)
+		{
+		document.write("<br/>");
+			
+			for (var column = 1;column <= 10;++column)
+				{
+					if (column > row)
+					continue nextrow;
+					document.write("* ");
+				}
+			
+		}	
+
+</script>
+</head>
+ 
+<body>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>DOM</title>
+		<script>
+function novoItem(){
+	var campos = document.getElementsByTagName("input");
+	var i;
+	var novaLinha = document.createElement("tr");
+		for (i=0; i<campos.length; i++){
+			var novaColuna = document.createElement("td");
+				novaColuna.innerHTML = campos[i].value;
+				novaLinha.appendChild(novaColuna);
+		}
+	var tabela = document.getElementById("tabela");
+	tabela.appendChild(novaLinha);
+	
+// Lumus Cria luz na ponta da varinha	
+// Lupusfor transforma uma pessoa em um lobo	
+}
+		</script>
+	</head>
+	<body>
+	
+			<div class="panel-heading">Meus feitiços</div></br>
+				<div class="panel-body">
+				Feitiço: <input type="text"/>
+				Nível: <input type="text"/>
+					<button type="button"  onclick="novoItem();">&plus; </button>
+				</div></br></br>
+
+				<div class="panel-body">
+					<table border="1" id="tabela">
+					<tr><th>Feitiço</th><th>Nível</th></tr>
+					</table>
+				</div>
+
+
+		
+	</body>
+</html>

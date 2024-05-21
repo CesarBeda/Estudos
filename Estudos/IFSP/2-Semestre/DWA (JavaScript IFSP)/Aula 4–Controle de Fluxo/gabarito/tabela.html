@@ -1,0 +1,25 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Documento sem título</title>
+ <script type = "text/javascript">
+<!--
+var n = 0; // counter control variable
+
+document.writeln("<table border='1' style='text-align:center'>");
+document.writeln("<tr><th>N</th><th>10*N</th>" + "<th>100*N</th><th>1000*N</th></tr>");
+
+ while(n++ <= 5)
+ {
+ document.writeln( "<tr><td>" + n + "</td><td>" + (n * 10) + "</td>" + "<td>" + (n * 100) + "</td><td>" + (n * 1000) + "</td></tr>" );
+ } // end while
+
+ document.writeln( "</table>" );
+ // -->
+</script>
+</head>
+ 
+<body>
+</body>
+</html>

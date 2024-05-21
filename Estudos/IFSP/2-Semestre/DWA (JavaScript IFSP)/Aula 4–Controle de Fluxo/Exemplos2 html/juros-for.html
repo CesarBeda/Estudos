@@ -1,0 +1,26 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Documento sem título</title>
+<script type="text/javascript">
+
+//juros compsotos
+var qtd;
+var principal = 1000;
+var taxa = .05;
+
+for (ano = 1; ano <=10; ++ano)
+	{
+		qtd = principal * Math.pow(1+taxa,ano);
+		document.write(ano+" - "+qtd+"<br/>");
+	}
+//  .toFixed(4)
+
+
+</script>
+</head>
+ 
+<body>
+</body>
+</html>

@@ -1,0 +1,58 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Documento sem título</title>
+<script type="text/javascript">
+
+//juros compsotos
+var choice;
+var starttag;
+var endtag;
+var validinput = true;
+var listtype;
+ 
+
+choice = window.prompt("Selecione um tipo de lista:\n"+"1 (Numerada), 2 (Letras), 3 (Romanos)","1");
+
+switch(choice)
+{
+	case "1":
+		 starttag="<ol>";
+		 endtag="</ol>";
+		 listtype="<h1>Lista Numerada</h1>";
+		 break;
+	case "2":
+		 starttag="<ol style=\"list-style-type:upper-alpha\">";
+		 endtag="</ol>";
+		 listtype="<h1>Lista com Letras</h1>";
+		 break;
+	case "3":
+		 starttag="<ol style=\"list-style-type:upper-roman\">";
+		 endtag="</ol>";
+		 listtype="<h1>Lista Romana</h1>";
+		 break;	
+	default:
+		validinput=false;
+}
+
+	if (validinput == true)
+	{
+	document.write(listtype+starttag);
+		
+		for (i=1;i<=3;++i)
+			document.write("<li>Item da lista "+ i +"</li>");	
+			
+		document.write(endtag);
+		
+	}
+	else
+		document.write("Escolha invalida: "+choice);
+	
+
+</script>
+</head>
+
+<body>
+</body>
+</html>

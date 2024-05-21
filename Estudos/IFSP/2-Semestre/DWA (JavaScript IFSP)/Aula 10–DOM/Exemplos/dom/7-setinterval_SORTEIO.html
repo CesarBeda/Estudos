@@ -1,0 +1,112 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+
+<style type="text/css">
+* {
+	padding: 0px;
+	margin: 0px;
+}
+
+body {
+	text-align: center;
+	background: #f1f1f1;
+}
+
+#sorteio {
+	width: 500px;
+	height: 100%;
+	margin: 0px auto;
+	padding: 0px 40px;
+	text-align: left;
+	border-left: 2px dotted #999999;
+	border-right: 2px dotted #999999;
+	background: #333333;
+}
+
+#sorteio h1 {
+	font: 220% Verdana, Arial, Sans-serif;
+	color: #99CC00;
+	padding: 30px 0px 10px 0px;
+}
+
+#sorteio #campo {
+	width: 450px;
+	_height: 52px;
+	padding: 10px;
+	font: 24px Verdana, Arial, Sans-serif;
+}
+
+#sorteio #btn {
+	padding: 10px 20px;
+	margin: 10px 0px;
+	text-align: center;
+}
+
+#config {
+	padding: 20px;
+	margin-top: 20px;
+	border: 2px dashed #333333;
+	background: #666666;
+}
+
+#config h2 {
+	font: 16px Verdana, Arial, Sans-serif;
+	margin: 0px 20px 10px 20px;
+}
+
+#config span {
+	width: 100px;
+	padding-left: 30px;
+	margin: 5px 0px;
+	font: 12px Verdana, Arial, Sans-serif;
+	color: #000000;
+	display: block;
+	float: left;
+}
+
+#config input {
+	margin: 5px;
+}
+
+</style>
+
+<script type="text/javascript">
+
+var nomes = ["Banana", "Maça", "Pera", "Manga", "Cajú", "Acerola", "Maracujá", "Melancia", "Melão", "Jabuticaba", "Pitanga", "Kiwi", "Goiaba", "Tamarindo"];
+
+function sorteio() {
+	var c = document.getElementById('campo');
+	var i = 0;
+	var velocidade = document.getElementById('speed').value;
+	var tempo = document.getElementById('time').value;
+	var intervalo = window.setInterval(function() {
+				if (i >= nomes.length)
+					i = 0;
+				c.value = nomes[i++];
+			}, velocidade);
+	window.setTimeout(function() {
+				clearInterval(intervalo);
+				var n = Math.floor(Math.random()*nomes.length);
+				c.value = nomes[n];
+			}, tempo);
+}
+
+</script>
+</head>
+<body>
+	<div id="sorteio">
+		<h1>Sorteio</h1>
+
+		<input type="text" id="campo" name="campo" /><br />
+		<input type="button" onclick="sorteio();" value="Sortear" id="btn" name="btn" />
+		<div id="config">
+			<h2>Configuração</h2>
+			<span>Velocidade: </span><input type="text" value="50" id="speed" name="speed" /><br />
+			<span>Tempo: </span><input type="text" value="2000" id="time" name="time" />
+		</div>
+
+	</div>
+</body>
+</html>

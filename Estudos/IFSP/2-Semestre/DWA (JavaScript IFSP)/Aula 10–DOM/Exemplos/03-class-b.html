@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>DOM</title>
+		<style>
+			.oculto{
+				display: none;
+				}
+		</style>
+		<script>
+		function aparecer(){
+			var paragrafos = document.getElementsByClassName("oculto");
+			var i=0;
+			while (paragrafos.length > 0)
+			{
+				paragrafos[i].classList.remove("oculto");	// removendo a classe do elemento (forma 2)
+			}
+		}
+		</script>
+	</head>
+	<body>
+		<h1 id="id_h1" class="classe_h1">Mundo Mágico do Javascript</h1>
+		<p id="corvinal" class="oculto">Corvinal</p>
+		<p id="grifinoria" class="oculto">Grifinória</p>
+		<p id="sonserina" class="oculto">Sonserina</p>
+		<p id="lufalufa" class="oculto">Lufa-Lufa</p>
+		<button type="button" id="bdefinir" onclick="aparecer();">Aparecium </button>
+	</body>
+</html>

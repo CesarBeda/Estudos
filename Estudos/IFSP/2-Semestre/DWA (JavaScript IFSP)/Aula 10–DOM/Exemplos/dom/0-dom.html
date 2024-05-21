@@ -1,0 +1,39 @@
+<html> 
+<head>
+<script type="text/javascript">
+function startTime()
+{
+var today=new Date();
+var h=today.getHours();
+var m=today.getMinutes();
+var s=today.getSeconds();
+// add a zero in front of numbers<10
+m=checkTime(m);
+s=checkTime(s);
+document.getElementById('txt').innerHTML=h+":"+m+":"+s;
+t=setTimeout('startTime()',500);
+}
+
+function checkTime(i)
+{
+if (i<10)
+  {
+  i="0" + i;
+  }
+return i;
+}
+</script>
+</head>
+
+<body onLoad="startTime()">
+<div id="txt"></div>
+<p>&nbsp;</p>
+<p><strong>Entendendo o DOM.</strong><br>
+  <br>
+  A  nova onda das p&aacute;ginas hoje em dia &eacute; o tal conceito AJAX. Mas para  entender esse conceito &eacute; necess&aacute;rio come&ccedil;ar pela base. A espinha dorsal  do AJAX &eacute; um conceito que n&atilde;o est&aacute; inserido na sua sigla, o famoso DOM  (Document Object Model).<br>
+</p>
+<p>O  DOM &eacute; uma API(Interface de Programa&ccedil;&atilde;o de Aplicativos) que manipula os  elementos de uma p&aacute;gina HTML e inclusive elementos de uma p&aacute;gina XML.  Com a utiliza&ccedil;&atilde;o do DOM voc&ecirc; pode alterar, criar e navegar pela  estrutura de sua p&aacute;gina.</p>
+<p><br>
+  O  modelo DOM &eacute; baseado no modelo hierarquia, em formato de uma &aacute;rvore.  Cada elemento ou texto &eacute; considerado um &ldquo;n&oacute;&rdquo;, e atrav&eacute;s desses n&oacute;s voc&ecirc;  pode alterar as estruturas da sua p&aacute;gina. O DOM pode ser manipulado por  qualquer linguagem script client-side (Javascript, Vbscript e etc...).</p>
+</body>
+</html>

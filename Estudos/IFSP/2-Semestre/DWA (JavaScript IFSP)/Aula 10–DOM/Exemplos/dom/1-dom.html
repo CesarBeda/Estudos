@@ -1,0 +1,37 @@
+<html>
+<head>
+<title>DOM</title> 
+<script language="javascript" type="text/javascript">
+
+  //Criamos uma função para adicionar um item a nossa lista
+ function addTexto(){
+ 
+  /*
+     Criamos uma variável para selecionar a lista através do comando
+     document.getElementById */
+  var lista_ul = document.getElementById("lista_ul");
+
+
+/* Criamos uma variável que cria um elemento em nossa pagina HTML, esse elemento será criado dentro da nossa lista */
+  var elemento_li = document.createElement("li"); 
+ 
+/*
+ O método appendChild acrescenta um elemento a nossa lista <li></li>
+ O método createTextNode adiciona texto na nossa lista que o usuário passa pelo prompt
+
+*/
+elemento_li.appendChild(document.createTextNode(prompt("Insira um item na lista", "Digita o item da lista")));
+
+
+//Cria o novo texto na lista
+lista_ul.appendChild(elemento_li);
+ }
+</script>
+</head>
+<body>
+ <!--link que chama a funcao para adicionar item na lista-->
+ <a href="#" onClick="addTexto();">Clique aqui para inserir item na lista</a>
+ <ul id="lista_ul">
+ </ul>
+</body>
+</html>

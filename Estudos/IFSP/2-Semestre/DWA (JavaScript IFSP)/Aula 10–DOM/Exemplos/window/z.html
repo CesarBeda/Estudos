@@ -1,0 +1,33 @@
+<html
+<head>
+<meta  charset=utf-8" />
+<title>Untitled Document</title>
+<style type="text/css">
+<!--
+body {
+	background-color: #3F6;
+}
+-->
+</style></head>
+<Script Language="JavaScript"> 
+	function quantidade()
+	  {	
+	var Paginas = history.length; 
+	window.alert( "paginas visitadas : " + Paginas ); 
+	  }
+</Script> 
+<body>
+<p><a href="x.html">x</a>
+  <a href="y.html">y</a>
+  <a href="z.html">z</a>
+</p>
+<h1>Z</h1>
+<p>Quantidade de páginas visitadas: <input type="button" value="Length" onclick="quantidade()" /></p>
+<p>Voltar 
+<input type="button" value="Back" onClick="JavaScript:window.history.back()">
+</p>
+<p>Voltar 2 
+<input type="button" value="Go" onClick="JavaScript:window.history.go(-2)">
+</p>
+</body>
+</html>

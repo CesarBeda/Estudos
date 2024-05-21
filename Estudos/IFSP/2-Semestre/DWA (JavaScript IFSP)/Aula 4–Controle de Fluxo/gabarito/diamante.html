@@ -1,0 +1,45 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Documento sem título</title>
+<script type="text/javascript">
+
+var row;
+var rate = 1;
+var stars = 1;
+var spaces;
+var i;
+
+spaces = 5; // spaces on left side of diamond
+ // (top row), equal to number of rows
+
+ document.write("<pre>");
+
+ for (row = 1; row <= 9; row++ )
+ {
+		 for (i = 1; i < spaces; i++)
+		 {
+		 document.write(" ");
+		 } // end for
+						 for (i = 1; i <= stars; i++)
+						 {
+						 document.write("*");
+						 } // end for
+		 document.write("<br/>");
+
+		 if (row == 5) // reverse halfway through
+		 rate*=-1;
+
+ stars+=(2*rate);
+ spaces-=rate;
+ } // end for
+document.write( "</pre>" );
+
+ 
+</script>
+</head>
+
+<body>
+</body>
+</html>

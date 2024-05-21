@@ -1,0 +1,83 @@
+<html> 
+  <head>
+  <title>A Função setInterval</title>
+  <script language="JavaScript">
+	
+	var intervalo = setInterval('mensagem()',5000);
+	
+	function mensagem()
+	{
+	window.alert( "Já se passaram 5 segundos .." );
+	}
+
+
+
+
+
+	function horario()
+	{
+	var Hoje = new Date();
+	var Horas    = Hoje.getHours();
+	var Minutos  = Hoje.getMinutes();
+	var Segundos = Hoje.getSeconds();
+
+	if(Horas<10) Horas = "0"+Horas;
+	if(Minutos<10) Minutos = "0"+Minutos;
+	if(Segundos<10) Segundos = "0"+Segundos;
+	
+	window.status=Horas+":"+Minutos+":"+Segundos;
+	}
+
+  </script>
+  </head>
+
+  <body bgcolor="#fffffa" onLoad="setInterval('horario()',1000)">
+    <a name="inicio">	
+
+    <h1 align="center">A Função setInterval</h1>
+    <hr>
+	<font face="Arial">
+	<p align="justify">Esta função é utilizada para definir intervalos de tempo na execução de funções.
+A diferença entre a setInterval e a setTimeout é clara: setTimeout processa a função uma vez, após o atraso
+de tempo, já setInterval, irá processar a função, várias vezes, separadas por um determinado tempo. Este 
+tempo é definido em milésimos de segundos, ou seja, se desejarmos um atraso intervalo de 2 segundos entre 
+a execução da função, deveremos declarar o tempo como sendo 2000 (milisegundos). Veja o exemplo prático.
+  <p>
+	<center>
+	</center><br>
+
+    
+	<center>
+	<input type="button" value="Cancela" onClick="intervalo=window.clearInterval(intervalo)">
+	</center>     
+    
+    
+	Veja o código fonte<br>
+	<br>
+	<font color="navy" face="serif">&lt;Script Language="JavaScript"&gt;
+	<br>
+	<br>
+     var intervalo = setInterval('mensagem()',5000);<br>
+     <br>
+	function mensagem()
+	{
+	<br>window.alert( "Já se passaram 5 segundos .." );
+	}
+	<br>
+	<br>
+    &lt;/Script&gt;;
+	</font>
+
+	<p>Você pode interromper a função setInterval a qualquer tempo, fazendo uso do
+	método <i><font color="#ff0000">clearInterval()</font></i> que acessa a função por meio de uma 
+	ID e cancela automaticamente a execução. 
+  <p>
+	<font color="navy" face="serif">
+
+&lt;input type="button" value="Cancela" onClick="intervalo=window.clearInterval(intervalo)"&gt;
+
+</font>  
+  
+   
+</body>
+</html>

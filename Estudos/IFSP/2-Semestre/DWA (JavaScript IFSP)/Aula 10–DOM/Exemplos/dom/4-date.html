@@ -1,0 +1,168 @@
+<html> 
+  <head>
+  <title>Objeto Date</title>
+  <script language="JavaScript">
+	function verdia()
+	{
+	var Hoje = new Date();
+	var Dia = Hoje.getDate();
+	window.alert( "Hoje é dia : " + Dia ); 
+	}
+	
+	function vermes()
+	{	
+	var Hoje = new Date(); 
+	var Mes = Hoje.getMonth()+1; 
+	window.alert( "Estamos no mês : " + Mes ); 
+	}
+	
+	function vernomemes()
+	{	
+	var Hoje = new Date(); 
+	var Mes = Hoje.getMonth(); 
+	var Nome_mes = new Array ("Janeiro","Fevereiro","Março","Abril","Maio","Junho","Julho","Agosto","Setembro","Outubro","Novembro","Dezembro"); 
+	window.alert( "Estamos no mês : " + Nome_mes[Mes] ); 
+	}
+		
+	function verano()
+	{		
+	var Hoje = new Date(); 
+	var Ano = Hoje.getFullYear(); 
+	window.alert( "Estamos no ano : " + Ano ); 
+	}
+	
+	function verdsemana()
+	{
+	var Hoje = new Date();
+	var Dia = Hoje.getDate();
+	var Dia_semana = Hoje.getDay();
+	var Mes = Hoje.getMonth();
+	var Ano = Hoje.getFullYear();
+	var Semana = new Array( "Domingo","Segunda-feira","Terça-feira","Quarta-feira","Quinta-feira","Sexta-feira","Sábado");
+	window.alert( "Hoje é: " + Semana[Dia_semana]); 
+	}	
+
+	function verhoras()
+	{
+	var Hoje = new Date(); 
+	var Hora = Hoje.getHours(); 
+		if (Hora<10) Hora = "0" + Hora;
+	var Minuto = Hoje.getMinutes(); 
+		if (Minuto<10) Minuto = "0" + Minuto;
+	var Segundo = Hoje.getSeconds(); 
+		if (Segundo<10) Segundo = "0" + Segundo;
+	var H = Hora + ":" + Minuto + ":" + Segundo; 
+	window.alert( "São exatamente " + H + " horas." ); 
+	}
+
+  </script>
+  </head>
+
+  <body bgcolor="#fffffa">
+
+<h1 align="center">O Objeto Date</h1>
+    <hr>
+	<p align="justify">O Objeto date permite-nos exibir datas e horas em nossas páginas. Ele contém uma grande variedade de métodos, por meio dos quais podemos exibir
+	a data atual na nossa página, fazer cálculos envolvendo horas e dias transcorridos, entre outras coisas. O primeiro procedimento antes de acessar os métodos desse 
+	objeto é criá-lo, ou seja, criar uma instância do objeto.
+
+	<p>var Hoje = new Date();
+
+	<p>Criamos uma variável chamada "Hoje" e atribuimos a ela o objeto date.
+
+  <p><b>Dia do mês</b><p>
+
+	<font color="navy" face="serif">
+	&lt;Script Language="JavaScript"&gt;
+	<br>var Hoje = new Date();
+	<br>var Dia = Hoje.getDate();
+	<br>window.alert( "Hoje é dia : " + Dia );
+	<br>&lt;/Script&gt;
+	<br>
+	<br>
+	</font>
+
+	  <input type="submit" name="button" id="button" value="ver dia" onClick="verdia();">
+
+
+	<hr>
+	<p><b>Mês do ano</b>
+	<p>
+	<font color="navy" face="serif">
+	&lt;Script Language="JavaScript"&gt;
+	<br>var Hoje = new Date();
+	<br>var Mes = Hoje.getMonth()+1;
+	<br>window.alert( "Estamos no mês : " + Mes );
+	<br>&lt;/Script&gt;
+	</font>
+
+	<font color="navy" face="serif"><br>
+	<br>
+    </font>
+    <input type="submit" name="button2" id="button2" value="ver mes" onClick="vermes();">
+    <p align="justify">Repare que foi adicionado o valor (1) no método getMonth(), pois este método retorna valores de 0 a 11 para representar os meses de Janeiro a Dezembro, respectivamente.
+	Podemos criar uma array com os nomes dos meses e trabalhar com os índices relacionados com o getMonth().
+  <p>
+	<font color="navy" face="serif">
+  &lt;Script Language="JavaScript"&gt;
+	<br>var Hoje = new Date();
+	<br>var Mes = Hoje.getMonth();
+	<br>var Nome_mes = new Array ("Janeiro","Fevereiro","Março","Abril","Maio","Junho","Julho","Agosto","Setembro","Outubro","Novembro","Dezembro");
+	<br>window.alert( "Estamos no mês : " + Nome_mes[Mes] );
+	<br>&lt;/Script&gt;
+	</font>
+    <br>
+  <p>
+    <input type="submit" name="button3" id="button3" value="ver nome do mes" onClick="vernomemes();">
+<hr>
+
+	<p><b>Retornando o ano</b><p>
+	<font color="navy" face="serif">
+	&lt;Script Language="JavaScript"&gt;
+	<br>var Hoje = new Date();
+	<br>var Ano = Hoje.getFullYear();
+	<br>window.alert( "Estamos no ano : " + Ano );
+	<br>&lt;/Script&gt;
+	</font>
+
+	<br>
+	<br>
+	<input type="submit" name="button4" id="button4" value="ver ano" onClick="verano();">
+	<p><b>Dia da Semana</b><p>
+
+	<font color="navy" face="serif">
+	&lt;Script Language="JavaScript"&gt;
+	<br>var Hoje = new Date();
+	<br>var Dia_Semana = Hoje.getDay();
+	<br>window.alert( "Dia da Semana : " + Dia_Semana );
+	<br>&lt;/Script&gt;
+	</font>
+	
+	<br>
+	<br>
+	<input type="submit" name="button5" id="button5" value="ver dia da semana" onClick="verdsemana();">
+    <p align="justify">
+  <font color="navy" face="serif"></font>
+
+  <p><b>Horas, minutos e segundos</b><p>
+
+	<font color="navy" face="serif">
+	&lt;Script Language="JavaScript"&gt;
+	<br>var Hoje = new Date();
+	<br>var Hora = Hoje.getHours();
+	<br>var Minuto = Hoje.getMinutes();
+	<br>var Segundo = Hoje.getSeconds();
+	<br>var H = Hora + ":" + Minuto + ":" + Segundo;
+
+	<br>window.alert( "São exatamente " + H + " horas." );
+	<br>&lt;/Script&gt;
+	</font>
+
+	<br>
+	<br>
+	<input type="submit" name="button6" id="button6" value="ver horas" onClick="verhoras();">
+  <p>
+  <center>
+  </center>
+</body>
+</html>

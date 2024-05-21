@@ -1,0 +1,53 @@
+// função retangulo 
+const Rectangle = function(x, y) {
+    this.x = x;
+    this.y = y;
+    this.calculateArea = function() {
+        if (this.x > 0 && this.y > 0) {
+            return this.x * this.y;
+        } else {
+            throw "Invalid value for x or y";
+        }
+    }
+};
+const rectangle = new Rectangle(10, 2);
+console.log(rectangle.calculateArea());
+
+// Vamos fazer um tratamento em CalculateArea 
+// Só calcula se x e y for MAIOR que 0
+// Senão (trow) é invalido - INTERROMPIDO
+const Rectangle = function(x, y) {
+    this.x = x;
+    this.y = y;
+    this.calculateArea = function() {
+        if (this.x > 0 && this.y > 0) {
+            return this.x * this.y;
+        } else {
+            throw "Invalid value for x or y";
+        }
+    }
+};
+const rectangle = new Rectangle(-10, -2); 
+// forçando o erro com valores negativos
+console.log(rectangle.calculateArea());
+
+// PRECISAMOS FAZER UM TRY CATCH pra melhorar
+// Vamos capturar o erro e exibir de maneira adequada
+const Rectangle = function(x, y) {
+    this.x = x;
+    this.y = y;
+    this.calculateArea = function() {
+        if (this.x > 0 && this.y > 0) {
+            return this.x * this.y;
+        } else {
+            throw "Invalid value for x or y";
+        }
+    }
+};
+try {
+    const rectangle = new Rectangle(-10, -2);
+    console.log(rectangle.calculateArea());
+} catch (e) {
+    alert(e);
+}
+

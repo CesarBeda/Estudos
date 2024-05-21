@@ -1,0 +1,61 @@
+<html> 
+  <head>
+  <title>A Função setTimeout</title>
+  <script language="JavaScript">
+	var contador=0;
+
+	function mensagem()
+	{
+	window.alert( "Já se passaram 3 segundos .." );
+	}
+
+    function contar()
+	{
+	contador++;
+	document.dados.saida.value=contador;
+	if (contador>10) 
+		{
+		    contador=0;
+		    document.dados.saida.value="";      
+		    return 0;
+		}
+	window.setTimeout( "contar()", 1000 );
+	}
+
+
+  </script>
+  </head>
+
+  <body bgcolor="#fffffa">
+    <h1 align="center">A Função setTimeout</h1>
+    <hr>
+	<p align="justify">setTimeout é um método do objeto window que permite disparar uma ação 
+	após um determinado tempo. Por exemplo, podemos chamar uma função qualquer após um
+	limite de tempo determinado. <font color="blue">window.alert( "Expressão", Tempo );
+	<i><u>Expressão</u></i> é a função que será processada e <i><u>Tempo</u></i> é o tempo de atraso para que a 
+	função seja executada. Este tempo é definido em milésimos de segundos, ou seja, se desejarmos
+	um atraso de 2 segundos, deveremos declarar o tempo como sendo 2000 (milisegundos). Veja um
+	exemplo prático, clicando no botão e aguardando 3 segundos....
+	
+	<center>
+	<input type="button" value="Teste" onClick="setTimeout('mensagem()',3000)">
+	</center>
+    <p>
+  <font color="navy" face="serif">
+	&lt;Script Language="JavaScript"&gt;
+	<br>
+	function mensagem()
+	{
+	<br>window.alert( "Já se passaram 3 segundos .." );
+	}
+<br>
+	&lt;/Script&gt;</font>
+  <p>Para testar esta função, faça a sua chamada no corpo da página, por exemplo com o seguinte código
+  <p>
+	<font color="navy" face="serif">
+	&lt;input type="button" value="Teste" onClick="setTimeout('mensagem()',3000)"&gt;
+	</font>
+
+  <p align="justify">  
+</body>
+</html>
