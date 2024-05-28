@@ -1,22 +1,35 @@
-// Operadores Lógicos
+//diferença de == e ===
 
-// && - and e
-// || - or ou
-// ! - not não
+let n1=1;
+let n2='1';
 
-let n1, n2, n3, n4
+console.log(n1 == n2) //considera apenas o valor
+console.log(n1 === n2) //considera o tipo
 
-n1=10;
-n2=5;
-n3=15;
-n4=2;
+let v1={nome:'Cesar'};
+let v2={nome:'Cesar'};
 
-console.log((n1>n2)&&(n1>n3)); //false
-console.log((n1>n2)||(n1>n3)); //true
-console.log(!(n1>n2)||(n1>n3)); //false inverte o retorno
+console.log(v1==v2); 
+console.log(v1===v2);
+//em objetos se considera o endereço de memória que é diferente
 
-if(n1>n2 && n3>n4){
-    console.log('verdadeiro');
-}else{
-    console.log('falso');
-}
+let v3={nome:'Cesar'};
+let v4=v3; //aponta para o endereço de memória
+
+console.log(v3==v4); 
+console.log(v3===v4);
+
+// let nome= prompt('digite seu nome: ') //só é possível receber valores pela interface gráfica html
+//não funciona no terminal, apenas no navegador
+
+// != comparação !(==) não igual
+// != diferente
+// ! not nega o valor, inverte
+
+let c1 =1;
+let c2 =2;
+
+console.log(c1!=c2);
+console.log(!(c1!=c2));
+console.log(!(c1==c2));
+
